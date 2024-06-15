@@ -12,7 +12,7 @@ const facebookConfig = {
   production: {
     FACEBOOK_APP_ID: process.env.FACEBOOK_APP_ID,
     FACEBOOK_APP_SECRET: process.env.FACEBOOK_APP_SECRET,
-    CALLBACK_URL: 'https://your-production-url.com/api/auth/facebook/callback'
+    CALLBACK_URL: 'https://passport-google-auth2.vercel.app/api/auth/facebook/callback'
   }
 };
 

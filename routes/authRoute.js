@@ -3,6 +3,8 @@ const router = express.Router();
 const passport = require('passport');
 
 require('../config/googleauth');
+require('../config/facebookAuth');
+const { generateAuthToken } = require('../utitilties/jwtUtils');
 
 // Default route for testing
 router.get('/login', (req, res) => {
@@ -29,10 +31,15 @@ router.get('/google/callback',
   })
 );
 
-// Facebook Authentication (Placeholder)
-router.get('/facebook', (req, res) => {
-  res.send('Facebook authentication not yet implemented.');
-});
+// Facebook Authentication
+router.get('/facebook', passport.authenticate('facebook', { scope: ['email'] }));
+
+router.get('/facebook/callback',
+  passport.authenticate('facebook', {
+    successRedirect: '/api/auth/locked',
+    failureRedirect: '/api/auth/login'
+  })
+);
 
 // Locked route (only accessible if logged in)
 router.get('/locked', loggedIn, (req, res) => {

@@ -12,7 +12,7 @@ const googleAuthConfig = {
   production: {
     GOOGLE_CLIENT_ID: process.env.GOOGLE_CLIENT_ID,
     GOOGLE_CLIENT_SECRET: process.env.GOOGLE_CLIENT_SECRET,
-    GOOGLE_CALLBACK_URL: 'https://sotrip.vercel.app/api/auth/google/callback'
+    GOOGLE_CALLBACK_URL: 'https://passport-google-auth2.vercel.app/api/auth/google/callback'
   }
 };
 

@@ -5,6 +5,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const errorHandler = require('./middlewares/errorHandler');
+const jwt = require('jsonwebtoken');
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
@@ -19,6 +20,7 @@ const connectToDatabase = require('./config/db');
 connectToDatabase();
 
 app.get('/', (req, res)=>{
+
     res.send(req.user? req.user : 'not logged in with google or facebook')
   })
 
