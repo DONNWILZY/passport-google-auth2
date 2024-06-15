@@ -1,6 +1,6 @@
 // middlewares\authMiddleWare.js
 
-const AppError = require('../utilities/appError');
+const AppError = require('../utitilties/appError');
 
 const errorHandler = (err, req, res, next) => {
     if (err instanceof AppError) {

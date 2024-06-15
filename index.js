@@ -8,10 +8,13 @@ const mongoose  = require('mongoose');
 const expressSession = require('express-session');
 const jwt = require('jsonwebtoken');
 const passport = require('passport');
+const errorHandler = require('./middlewares/errorHandler');
+
 dotenv.config();
 const PORT = process.env.PORT || 5000
 
 app.use(express.json());
+app.use(errorHandler); // error handler middleware
 app.use(session({ secret: 'dog'}));
 app.use(passport.initialize());
 app.use(passport.session());
