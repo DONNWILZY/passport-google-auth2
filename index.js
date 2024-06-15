@@ -16,6 +16,12 @@ app.get('/', (req, res) =>{
 });
 
 
+// Import routes
+const auth = require('./routes/authRoute');
+
+// Routes middlewares
+app.use('/api/auth', auth);
+
 
 
 

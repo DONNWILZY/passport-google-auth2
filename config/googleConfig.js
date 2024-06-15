@@ -1,4 +1,4 @@
-//config\googleAuthEnv.js
+//config\googleConfig.js
 
 const dotenv = require('dotenv');
 dotenv.config();
