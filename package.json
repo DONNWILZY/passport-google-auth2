@@ -1,4 +1,13 @@
 {
+  "name": "passport-google-auth2",
+  "version": "1.0.0",
+  "description": "passport google-auth Login-with-google",
+  "main": "index.js",
+  "scripts": {
+    "start": "NODE_ENV=development node index.js",
+    "dev": "nodemon index.js",
+    "build": "index.js"
+  },
   "dependencies": {
     "body-parser": "^1.20.2",
     "cors": "^2.8.5",
@@ -11,5 +20,24 @@
     "nodemon": "^3.1.3",
     "passport": "^0.7.0",
     "passport-google-oauth2": "^0.2.0"
-  }
+  },
+  "devDependencies": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/DONNWILZY/passport-google-auth2.git"
+  },
+  "keywords": [
+    "google",
+    "auth",
+    "passport",
+    "strategy",
+    "auth2",
+    "google-login"
+  ],
+  "author": "GODSWILL EFFIONG",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/DONNWILZY/passport-google-auth2/issues"
+  },
+  "homepage": "https://github.com/DONNWILZY/passport-google-auth2#readme"
 }
