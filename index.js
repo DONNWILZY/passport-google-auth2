@@ -18,9 +18,9 @@ app.use(passport.session());
 const connectToDatabase = require('./config/db');
 connectToDatabase();
 
-app.get('/', (req, res) => {
-  res.send('DEFAULT ROUTE IS WORKING');
-});
+app.get('/', (req, res)=>{
+    res.send(req.user? req.user : 'not logged in with google or facebook')
+  })
 
 // Import routes
 const auth = require('./routes/authRoute');

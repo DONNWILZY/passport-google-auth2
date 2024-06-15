@@ -24,7 +24,7 @@ router.get('/google', passport.authenticate('google', { scope: ['email', 'profil
 
 router.get('/google/callback',
   passport.authenticate('google', {
-    successRedirect: '/locked',
+    successRedirect: '/api/auth/locked',
     failureRedirect: '/login',
   })
 );
