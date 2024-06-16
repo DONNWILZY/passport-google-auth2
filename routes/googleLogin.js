@@ -4,7 +4,7 @@ const passport = require('passport');
 const jwt = require('jsonwebtoken');
 
 // Ensure Google and Facebook strategies are configured
-require('../config/googleAuth');
+require('../config/googleauth');
 require('../config/facebookAuth');
 
 // Utility to generate JWT token

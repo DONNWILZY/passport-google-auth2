@@ -12,7 +12,7 @@ const signupSuccessfulEmail = async (email, name) => {
             html: `
                 <h1>Welcome to SoTrip</h1>
                 <p>Dear ${name},</p>
-                <p>Your registration was successful. You can now log in using your credentials.</p>
+                <p>Your registration was successful. You can create create passoword for your account.</p>
             `
         };
 

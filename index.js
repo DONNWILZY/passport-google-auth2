@@ -5,7 +5,7 @@ const session = require('express-session');
 const mongoose = require('mongoose');
 const passport = require('passport');
 const errorHandler = require('./middlewares/errorHandler');
-const jwt = require('jsonwebtoken');
+const jwt = require('jsonwebtoken')
 
 dotenv.config();
 const PORT = process.env.PORT || 5000;
